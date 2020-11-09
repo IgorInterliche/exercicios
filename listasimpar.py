@@ -1,3 +1,4 @@
+#
 valores = list()
 pares = list()
 impares = list()

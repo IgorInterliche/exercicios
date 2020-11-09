@@ -1,3 +1,5 @@
+#rrr
+
 valor = list()
 while True:
     valor.append(int(input('Digite um valor: ')))

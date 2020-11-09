@@ -1,3 +1,4 @@
+#
 galera = list()
 dado = list()
 totalmai = totalmen = 0
