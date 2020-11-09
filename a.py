@@ -10,6 +10,9 @@ if n1 > n2:
 elif n2 > n1:
     print('O segundo número é o maior')
     print('O primeiro número é o menor')
+elif n1==n2:
+    print('O segundo número é igual ao primeiro')
 else:
-    print('Os dois números são iguais, portanto, não existe valor maior ou menor')
+    print('nenhuma das condições foram satisfeitas...')
+
 
