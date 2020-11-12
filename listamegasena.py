@@ -1,3 +1,5 @@
+#Programa revisto com o Igor em __/__/__
+
 from random import randint
 from time import sleep
 lista = list()

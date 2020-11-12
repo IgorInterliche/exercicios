@@ -1,3 +1,5 @@
+#Programa revisto com o Igor em 11/11/2020__
+
 ficha = list()
 while True:
     nome = str(input('Nome: '))
