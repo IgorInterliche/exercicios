@@ -1,3 +1,5 @@
+#Ex revisado em 10dez, sem maiores duvidas...
+
 cont = ('zero', 'um', 'dois', 'três', 'quatro',
         'cinco', 'seis', 'sete', 'oito', 'nove',
         'dez', 'onze', 'doze', 'treze', 'quatorze',
