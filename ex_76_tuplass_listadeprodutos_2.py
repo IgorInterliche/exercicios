@@ -20,7 +20,7 @@ col_tot = 5  #total de colunas
 for pos in range(0, len(listagem)):
 
     if col_atu < col_tot:
-        print(f'{listagem[pos]:<19}', end='')
+        print(f'{listagem[pos]:<19}', end='')  #19 é o numero de caracteres maximo das colunas...
         col_atu = col_atu + 1
 
     else:
