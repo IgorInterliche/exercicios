@@ -1,5 +1,6 @@
-# Acrescentei funções para otimizar esse programa, deixando ele mais prático
-from Util.vetores import soma_lista
+# Acrescentei funções, uma interna e outra na biblioteca utl.
+import Util.vetores
+
 
 def imp_vetor(vdes, vcol):
     # imprime vetor em linhas...
@@ -51,7 +52,7 @@ coluna = (23,
           5,
           20)
 
-lin_sep = '-' * soma_lista(coluna)
+lin_sep = '-' * soma_lista(coluna)  # soma_lista a partir da biblioteca util.
 
 # ---------------------@
 # _____execução___
