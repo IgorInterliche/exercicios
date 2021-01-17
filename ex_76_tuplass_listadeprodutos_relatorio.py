@@ -1,4 +1,14 @@
-def imp_vetor(vdes, vcol):
+import Util.vetores as util
+
+
+def proc(vdes, vcol, stitulo):
+
+    lin_sep = '-' * util.soma_lista(vcol)  # soma_lista a partir da biblioteca util.
+
+    print()
+    print('Listagem de Produtos ', stitulo)
+    print(lin_sep)
+
     # imprime vetor em linhas...
     tot_col = len(vcol)    # Total de colunas
     tot_itens = len(vdes)  # total de itens a serem impressos em todas as colunas#
@@ -19,4 +29,5 @@ def imp_vetor(vdes, vcol):
             print(campo)
             col_atu = 0
 
-    print(' ')
+    print(lin_sep)
+
