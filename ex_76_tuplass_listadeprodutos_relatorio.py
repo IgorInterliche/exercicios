@@ -1,15 +1,19 @@
 import Util.vetores as util
 
 
-def proc(vdes, vcol, stitulo):
-
-    lin_sep = '-' * util.soma_lista(vcol)  # soma_lista a partir da biblioteca util.
-
+def proc(vitens, vcab, vtamcol, stitulo):
+    lin_sep = '-' * util.soma_lista(vtamcol)  # soma_lista a partir da biblioteca util.
     print()
     print('Listagem de Produtos ', stitulo)
     print(lin_sep)
+    imprime(vcab, vtamcol)
+    print(lin_sep)
+    imprime(vitens, vtamcol)
+    print(lin_sep)
 
-    # imprime vetor em linhas...
+
+def imprime(vdes, vcol):
+
     tot_col = len(vcol)    # Total de colunas
     tot_itens = len(vdes)  # total de itens a serem impressos em todas as colunas#
     col_atu = 0            # inicializa para a coluna 1 para entrar no loop do processamento...
@@ -28,6 +32,3 @@ def proc(vdes, vcol, stitulo):
         else:
             print(campo)
             col_atu = 0
-
-    print(lin_sep)
-

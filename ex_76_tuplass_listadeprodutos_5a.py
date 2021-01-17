@@ -18,6 +18,7 @@ cabecalho = ('Descrição do Produto',
              'Em estoque',
              'Lote',
              'Nome vendedor')
+
 coluna = (23,
           8,
           9,
@@ -26,6 +27,6 @@ coluna = (23,
           5,
           20)
 
-rel.proc(listagem, coluna, 'Relatório A')
-#                #
+rel.proc(listagem, cabecalho, coluna, 'Relatório A')
+#                 #
 # ______fim_______#
