@@ -1,7 +1,7 @@
 # main program #
 # iniciação das variáveis-----------
 #
-import ex_76_tuplass_listadeprodutos_relatorio as rel
+import ex_76_tuplass_listadeprodutos_relatorio as relatorio
 
 listagem = ('Monitor', 989.99, 'duplo', 'jose',
             'Controle sem fio', 399.99, 'duplo', 'maria eduarda',
@@ -16,9 +16,6 @@ coluna = (23,
           9,
           20)
 
-# ---------------------@
-# _____execução___
-#
-rel.proc(listagem, cabecalho, coluna, 'Relatório B')
-#                #
-# ______fim_______#
+
+relatorio.processar(listagem, cabecalho, coluna, 'Relatório B')
+

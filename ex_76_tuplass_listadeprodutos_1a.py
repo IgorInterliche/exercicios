@@ -14,7 +14,6 @@ print('Listagem de Preços')
 print('-' * 55)
 
 col = 1
-num_col = 4
 
 for pos in range(0, len(listagem)):
     if col == 1:

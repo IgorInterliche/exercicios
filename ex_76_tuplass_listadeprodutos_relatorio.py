@@ -1,34 +1,42 @@
-import Util.vetores as util
+# Clean code, tell, don't ask...
+
+import Util.vetores as ut
 
 
-def proc(vitens, vcab, vtamcol, stitulo):
-    lin_sep = '-' * util.soma_lista(vtamcol)  # soma_lista a partir da biblioteca util.
+def processar(vetor_itens, vetor_cabecalho, vetor_tam_coluna, stitulo):
+    lin_sep = "-" * ut.soma_lista(vetor_tam_coluna)
     print()
-    print('Listagem de Produtos ', stitulo)
+    print("Listagem de Produtos ", stitulo)
     print(lin_sep)
-    imprime(vcab, vtamcol)
+    print_report(vetor_cabecalho, vetor_tam_coluna)
     print(lin_sep)
-    imprime(vitens, vtamcol)
+    print_report(vetor_itens, vetor_tam_coluna)
     print(lin_sep)
 
 
-def imprime(vdes, vcol):
+def _is_value_float_or_int(position_value):
+    return type(position_value) == float or type(position_value) == int
 
-    tot_col = len(vcol)    # Total de colunas
-    tot_itens = len(vdes)  # total de itens a serem impressos em todas as colunas#
-    col_atu = 0            # inicializa para a coluna 1 para entrar no loop do processamento...
 
-    for pos in range(0, tot_itens):
-        if type(vdes[pos]) == float or type(vdes[pos]) == int:
-            campo = str(vdes[pos])  # precisa converter por causa dos campos numéricos...
+def _print_line(field, columns_size, end_of_line):
+    if _is_value_float_or_int(field):
+        field = str(field)
+
+    spaces = columns_size - len(field)
+    field = field + (spaces * " ")
+    end_of_line = "\n" if end_of_line else ""
+    print(field, end=end_of_line)
+
+
+def print_report(fields, fields_size):
+    fields_total = len(fields)
+    colums_total = len(fields_size)
+    actual_column = 0
+
+    for position in range(0, fields_total):
+        if actual_column < colums_total-1:
+            _print_line(fields[position], fields_size[actual_column], False)
+            actual_column = actual_column + 1
         else:
-            campo = vdes[pos]
-
-        tot_esp = vcol[col_atu] - len(campo)  # Total espaços=tamanho do campo desejado - tamanho do campo atual
-        campo = campo + (tot_esp * ' ')       # acrescenta os espaços ao final do campo para ficarem todos alinhados.
-        if col_atu < tot_col - 1:             # inibe a impressão do proximo print na proxima linha.
-            print(campo, end='')
-            col_atu = col_atu + 1
-        else:
-            print(campo)
-            col_atu = 0
+            _print_line(fields[position], fields_size[actual_column], True)
+            actual_column = 0
