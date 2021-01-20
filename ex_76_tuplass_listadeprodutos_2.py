@@ -18,6 +18,7 @@ tam_col = (20,
            9,
            8,
            10)
+
 col_atu = 0  #numero da coluna atual
 col_tot = len(des_col) #total de colunas
 #fim da iniciação das variaveis
