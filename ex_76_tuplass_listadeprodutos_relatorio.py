@@ -18,7 +18,7 @@ def _is_value_float_or_int(position_value):
     return type(position_value) == float or type(position_value) == int
 
 
-def _print_line(field, field_size, new_line):
+def _print_line(field, field_size, new_line=True):
     if _is_value_float_or_int(field):
         field = str(field)
 
@@ -38,5 +38,5 @@ def print_report(fields, fields_size):
             _print_line(fields[position], fields_size[actual_column], False)
             actual_column = actual_column + 1
         else:
-            _print_line(fields[position], fields_size[actual_column], True)
+            _print_line(fields[position], fields_size[actual_column])
             actual_column = 0
