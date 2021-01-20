@@ -14,12 +14,12 @@ def processar(vetor_itens, vetor_cabecalho, vetor_tam_coluna, stitulo):
     print(lin_sep)
 
 
-def _is_value_float_or_int(position_value):
-    return type(position_value) == float or type(position_value) == int
+def _is_field_float_or_int(field_value):
+    return type(field_value) == float or type(field_value) == int
 
 
 def _print_line(field, field_size, new_line=True):
-    if _is_value_float_or_int(field):
+    if _is_field_float_or_int(field):
         field = str(field)
 
     spaces = field_size - len(field)
@@ -28,15 +28,15 @@ def _print_line(field, field_size, new_line=True):
     print(field, end=new_line)
 
 
-def print_report(fields, fields_size):
-    fields_total = len(fields)
+def print_report(fields_value, fields_size):
+    fields_total = len(fields_value)
     colums_total = len(fields_size)
     actual_column = 0
 
     for position in range(0, fields_total):
         if actual_column < colums_total-1:
-            _print_line(fields[position], fields_size[actual_column], False)
+            _print_line(fields_value[position], fields_size[actual_column], False)
             actual_column = actual_column + 1
         else:
-            _print_line(fields[position], fields_size[actual_column])
+            _print_line(fields_value[position], fields_size[actual_column])
             actual_column = 0
