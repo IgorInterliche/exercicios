@@ -9,8 +9,8 @@ listagem = ('Monitor', 989.99, 'Eletronico',
           'Headset', 80.00, 'eletronico',
           'Controle sem fio', 399.99, 'utilitario',
           'Caixas de som', 99.99, 'utilitario',
-        'Carregador para celular', 29.99, 'utilitario',
-            'Testador de carga',100.00, 'utilitario')
+          'Carregador para celular', 29.99, 'utilitario',
+          'Testador de carga',100.00, 'utilitario')
 
 print()
 print('Listagem de Preços')

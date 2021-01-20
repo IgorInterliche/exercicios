@@ -7,13 +7,15 @@ listagem = ('Monitor', 989.99, 'duplo', 'jose',
             'Controle sem fio', 399.99, 'duplo', 'maria eduarda',
             'Caixas de som', 99.99, 'simples', 'josefina',
             'Carregador celular', 29.99, 'duplo', 'eliete')
-cabecalho = ('Descrição do Produto',
-             'Valor',
-             'Tipo',
-             'Nome vendedor')
+
+cabecalho = ('Item Final',
+             'Valor Final',
+             'Capacidade',
+             'Nome do Comprador')
+
 coluna = (23,
-          8,
-          9,
+          12,
+          12,
           20)
 
 
