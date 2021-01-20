@@ -18,14 +18,14 @@ def _is_value_float_or_int(position_value):
     return type(position_value) == float or type(position_value) == int
 
 
-def _print_line(field, columns_size, end_of_line):
+def _print_line(field, field_size, new_line):
     if _is_value_float_or_int(field):
         field = str(field)
 
-    spaces = columns_size - len(field)
+    spaces = field_size - len(field)
     field = field + (spaces * " ")
-    end_of_line = "\n" if end_of_line else ""
-    print(field, end=end_of_line)
+    new_line = "\n" if new_line else ""
+    print(field, end=new_line)
 
 
 def print_report(fields, fields_size):
