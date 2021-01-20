@@ -20,13 +20,13 @@ col = 1
 
 for pos in range(0, len(listagem)):
     if col == 1:
-        print(f'{listagem[pos]:.<30}', end='')
+        print(listagem[pos], end='')
         col = 2
     elif col == 2:
-        print(f'R${listagem[pos]:>7.2f}', end='')
+        print(listagem[pos], end='')
         col = 3
     elif col ==3:
-        print(f'  {listagem[pos]}')
+        print(listagem[pos])
         col = 1
 
 

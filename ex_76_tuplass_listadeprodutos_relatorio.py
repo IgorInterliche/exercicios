@@ -1,10 +1,10 @@
 # Clean code, tell, don't ask...
 
-import Util.vetores as ut
+import Util.vetores as vetores
 
 
 def processar(vetor_itens, vetor_cabecalho, vetor_tam_coluna, stitulo):
-    lin_sep = "-" * ut.soma_lista(vetor_tam_coluna)
+    lin_sep = "-" * vetores.soma_lista(vetor_tam_coluna)
     print()
     print("Listagem de Produtos ", stitulo)
     print(lin_sep)

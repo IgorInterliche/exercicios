@@ -28,6 +28,6 @@ coluna = (23,
           20)
 
 
-relatorio.processar(listagem, cabecalho, coluna, "teste")
+relatorio.processar(listagem, cabecalho, coluna, "Relatório A")
 #                 #
 # ______fim_______#
