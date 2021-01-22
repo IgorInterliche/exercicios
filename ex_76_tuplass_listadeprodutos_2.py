@@ -8,11 +8,11 @@ listagem = ('Monitor', 989.99,'duplo','1', 'sim',
             'Caixas de som', 99.99,'simples','6', 'sim',
             'Carregador celular', 29.99,'duplo', '7', 'nao')
 
-des_col = ('  Descrição            ',
-           ' Valor    ',
-           ' Tipo      ',
-           ' Item   ',
-           ' Em estoque  ')
+colunas = ('Descrição',
+           'Valor',
+           'Tipo',
+           'Item',
+           'Em estoque')
 tam_col = (20,
            8,
            9,
