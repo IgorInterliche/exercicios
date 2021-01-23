@@ -3,7 +3,6 @@ import Util.tipos as tipo
 
 
 def processar(itens_relatorio, informacoes_colunas, stitulo):
-
     total_colunas = len(informacoes_colunas)
     nome_colunas = []
     tamanho_colunas = []
@@ -18,14 +17,13 @@ def processar(itens_relatorio, informacoes_colunas, stitulo):
         moeda_colunas.append((informacoes_colunas[i][3]))
 
     lin_sep = "-" * comprimento_do_relatorio
-
     # * vetores.soma_lista(vetor_tam_coluna)
     print()
     print("Listagem de Produtos ", stitulo)
     print(lin_sep)
-    print_report(nome_colunas, tamanho_colunas, alinha_colunas, moeda_colunas)
+    _print_cabecalho(nome_colunas, tamanho_colunas, alinha_colunas, moeda_colunas)
     print(lin_sep)
-    print_report(itens_relatorio, tamanho_colunas, alinha_colunas, moeda_colunas)
+    _print_report(itens_relatorio, tamanho_colunas, alinha_colunas, moeda_colunas)
     print(lin_sep)
 
 
@@ -37,7 +35,7 @@ def _is_field_int(field_value):
     return type(field_value) == int
 
 
-def _print_line(field, field_size, field_alinhamento, field_moeda, new_line=True):
+def _print(field, field_size, field_alinhamento, field_moeda, new_line=True):
     if _is_field_float(field):
         field = tipo.float_em_str_moeda_real(field, field_moeda)
     elif _is_field_int(field):
@@ -54,15 +52,40 @@ def _print_line(field, field_size, field_alinhamento, field_moeda, new_line=True
     print(field, end=new_line)
 
 
-def print_report(fields_value, fields_size, fields_alinhamento, fields_moeda):
-    fields_total = len(fields_value)
-    colums_total = len(fields_size)
-    actual_column = 0
+def _print_cabecalho(fields_value, fields_size, fields_alinhamento, fields_moeda):
+    colunas_total = len(fields_value)
+    for field in range(0, colunas_total):
+        if field < colunas_total - 1:
+            _print(fields_value[field],
+                   fields_size[field],
+                   fields_alinhamento[field],
+                   fields_moeda[field],
+                   False)
 
-    for position in range(0, fields_total):
-        if actual_column < colums_total-1:
-            _print_line(fields_value[position], fields_size[actual_column], fields_alinhamento[actual_column], fields_moeda[actual_column], False)
-            actual_column = actual_column + 1
         else:
-            _print_line(fields_value[position], fields_size[actual_column], fields_alinhamento[actual_column], fields_moeda[actual_column])
-            actual_column = 0
+            _print(fields_value[field],
+                   fields_size[field],
+                   fields_alinhamento[field],
+                   fields_moeda[field],
+                   True)
+
+
+def _print_report(fields_value, fields_size, fields_alinhamento, fields_moeda):
+    linhas_total = len(fields_value)
+    for linha in range(0, linhas_total):
+        colunas_total = len(fields_value[linha])
+
+        for field in range(0, colunas_total):
+            if field < colunas_total - 1:
+                _print(fields_value[linha][field],
+                       fields_size[field],
+                       fields_alinhamento[field],
+                       fields_moeda[field],
+                       False)
+
+            else:
+                _print(fields_value[linha][field],
+                       fields_size[field],
+                       fields_alinhamento[field],
+                       fields_moeda[field],
+                       True)

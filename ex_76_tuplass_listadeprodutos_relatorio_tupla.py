@@ -61,8 +61,15 @@ def print_report(fields_value, fields_size, fields_alinhamento, fields_moeda):
 
     for position in range(0, fields_total):
         if actual_column < colums_total-1:
-            _print_line(fields_value[position], fields_size[actual_column], fields_alinhamento[actual_column], fields_moeda[actual_column], False)
+            _print_line(fields_value[position],
+                        fields_size[actual_column],
+                        fields_alinhamento[actual_column],
+                        fields_moeda[actual_column],
+                        False)
             actual_column = actual_column + 1
         else:
-            _print_line(fields_value[position], fields_size[actual_column], fields_alinhamento[actual_column], fields_moeda[actual_column])
+            _print_line(fields_value[position],
+                        fields_size[actual_column],
+                        fields_alinhamento[actual_column],
+                        fields_moeda[actual_column])
             actual_column = 0

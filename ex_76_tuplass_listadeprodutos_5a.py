@@ -1,7 +1,7 @@
 # main program #
 # iniciação das variáveis-----------
 #
-import ex_76_tuplass_listadeprodutos_relatorio as relatorio
+import ex_76_tuplass_listadeprodutos_relatorio_tupla as relatorio
 
 listagem = ('Monitor', 999.789, 'duplo', '1', 'sim', 23, 'jose',
             'Teclado', 50.99, 'simples', '2', 'nao', 26, 'pedro',
