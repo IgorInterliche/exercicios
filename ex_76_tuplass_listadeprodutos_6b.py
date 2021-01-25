@@ -8,11 +8,11 @@ listagem = [('Televisão', 989.123, 'duplo', 'jose'),
             ('Caixas de som', 99.99, 'simples', 'josefina'),
             ('Carregador celular', 29.99, 'duplo', 'eliete')]
 
-cabecalho = [('Item', 19, False, False),
-             ('Valor Final', 12, False, False),
-             ('Capacidade', 10, True, False),
-             ('Nome do Comprador', 40, True, False)]
+info_colunas = [('Item', 19, False, False),
+                ('Valor Final', 12, False, False),
+                ('Capacidade', 10, True, False),
+                ('Nome do Comprador', 40, True, False)]
 
 
-relatorio.processar(listagem, cabecalho, 'Relatório B')
+relatorio.processar(listagem, info_colunas, 'Relatório B')
 
