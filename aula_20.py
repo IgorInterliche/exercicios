@@ -1,19 +1,18 @@
-def soma(variavel_a, variavel_b ):
-    variavel_s = variavel_a + variavel_b
-    return variavel_s
-
+def divisao(linguica, calabreza):
+    vs = linguica / calabreza
+    return vs
 
 # programa principal   ou   main program
 
 
-a = 4
-b = 5
+caderno = 2
 
-r = soma(a, b)
+r = divisao(4, caderno)
 print(r)
 
-c = 10
-d = 11
 
-r = soma(c, d)
+c = 10
+d = 2
+
+r = divisao(c, d)
 print(r)
