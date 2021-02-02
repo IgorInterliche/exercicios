@@ -27,9 +27,9 @@ def processar(itens_relatorio, info_colunas, stitulo):
 
 
 def _format_field(field_value, field_size, field_alinha, field_moeda):
-    if tipo.is_field_float(field_value):
+    if tipo.is_float(field_value):
         field_value = tipo.float_em_str_moeda_real(field_value, field_moeda)
-    elif tipo.is_field_int(field_value):
+    elif tipo.is_int(field_value):
         field_value = str(field_value)
 
     spaces_num = field_size - len(field_value) + 1

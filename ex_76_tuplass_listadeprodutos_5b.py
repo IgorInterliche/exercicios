@@ -3,21 +3,21 @@
 #
 import ex_76_tuplass_listadeprodutos_relatorio_tupla as relatorio
 
-listagem = ('Televisão', 989.123, 'duplo', 'jose',
-            'Controle sem fio', 399.99, 'duplo', 'maria eduarda',
-            'Caixas de som', 99.99, 'simples', 'josefina',
-            'Carregador celular', 29.99, 'duplo', 'eliete')
+listagem = ('Televisão', 99989.129,  'jose',
+            'Controle sem fio', 399.99, 'maria eduarda',
+            'Caixas de som', 99.99, 'josefina',
+            'Carregador celular', 29.99, 'eliete')
+
+
 
 cabecalho = ('Item Final',
              'Valor Final',
-             'Capacidade',
              'Nome do Comprador')
 
-coluna = (23,
-          12,
+coluna = (20,
           12,
           20)
 
 
-relatorio.processar(listagem, cabecalho, coluna, 'Relatório B')
+relatorio.processar(listagem, cabecalho, coluna, 'Relatório igor')
 
