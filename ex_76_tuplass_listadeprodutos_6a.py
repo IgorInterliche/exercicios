@@ -1,6 +1,5 @@
-# main program #
 # acrescentado as listas
-#
+
 import ex_76_tuplass_listadeprodutos_relatorio_lista as relatorio
 
 listagem = [('Monitor', 999.7899999, 'duplo', '1', 'sim', 23, 'jose'),
@@ -20,13 +19,5 @@ info_colunas = [('Descrição', 20, True, False),
            ('Lote', 5, True, False, False),
            ('Nome vendedor', 23, True, False)]
 
-# Teste do loop no vetor duplo... controlando as linnhas e itens:
-
-# for a in range(0, len(colunas)):
-#    for b in range(0, len(colunas[a])):
-#        print(colunas[a][b])
-
-
-relatorio.processar(listagem, info_colunas, "Relatório A")
-#                 #
+relatorio.processar(listagem, info_colunas, "Relatório 6A")
 # ______fim_______#
