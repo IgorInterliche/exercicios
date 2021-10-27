@@ -15,7 +15,7 @@ def alinha_campo(campo_original, campo_tamanho):
     return campo_original + espaco
 
 
-def soma_lista(vlista):  # soma os itens de uma lista (vetor)
+def soma_itens_lista(vlista):  # soma os itens de uma lista (vetor)
     car_lin = 0
     col_tot = len(vlista)
     for pos in range(0, col_tot):
@@ -50,8 +50,8 @@ coluna = (23,
           5,
           20)
 
-lin_sep = '-' * soma_lista(coluna)
-# ---------------------@
+lin_sep = '-' * soma_itens_lista(coluna)
+# ---------------------------------------@
 # __execução__
 #
 print()

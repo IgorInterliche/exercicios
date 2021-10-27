@@ -57,6 +57,7 @@ def _print_cabecalho(fields_value, fields_size, fields_alinhamento, fields_moeda
         _print_field(field_formated, False)
     print()
 
+
 def _print_report(fields_value, fields_size, fields_alinhamento, fields_moeda):
     lin_total = len(fields_value)
     for lin_num in range(0, lin_total):

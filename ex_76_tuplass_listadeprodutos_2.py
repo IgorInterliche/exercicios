@@ -8,35 +8,8 @@ listagem = ('Monitor', 989.99, 'duplo', '1', 'sim',
             'Caixas de som', 99.99, 'simples', '6', 'sim',
             'Carregador celular', 29.99, 'duplo', '7', 'nao')
 
-nome_colunas = ('Descrição',
-                'Valor',
-                'Tipo',
-                'Item',
-                'Em estoque')
-
-tam_colunas = (20,
-               8,
-               9,
-               8,
-               10)
-
-col_atu = 0
-col_tot = len(nome_colunas)
-# fim da iniciação das variaveis
-
-# impressão do cabeçalho-----
-print()
-print('Listagem de Produtos')
-print('-' * 66)
-for pos in range(0, col_tot):
-    print(nome_colunas[pos], end='')
-
-print()
-print('-' * 66)
-# fim do cabeçalho
-
-# impressão das linhas detalhe----
-for pos in range(0, len(listagem)):
+total_de_linhas = len(listagem)
+for pos in range(0, total_de_linhas):
     campo = str(listagem[pos])
     n_esp = tam_colunas[col_atu] - len(campo)
     campo = campo + (n_esp * ' ')
