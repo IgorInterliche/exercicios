@@ -1,6 +1,5 @@
 # Clean code, tell, don't ask...
-
-import Util.vetores as vetores
+#import Util.vetores as vetores
 
 
 def processar(vetor_itens, vetor_cabecalho, vetor_tam_coluna, stitulo):
